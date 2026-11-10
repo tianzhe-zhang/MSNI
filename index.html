@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="description" content="PDFs of two papers on marginally strictly negative imaginary (MSNI) systems: IEEE CDC 2026 and IJRNC 2026.">
+<title>MSNI Papers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+<style>
+/* One white column: a small header, then each paper with its title, authors and a PDF link. No scripts. */
+:root {
+  --ink: #1c1922;
+  --muted: #5c5667;
+  --rule: #e2dce9;
+  --accent: #660099;
+  --gold: #8a6500;
+  --display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: only light;
+}
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+main {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1 {
+  margin: 0 0 .5rem;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.paper {
+  display: grid;
+  gap: .45rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+h1 + .paper { border-top: 0; padding-top: 1rem; }
+.kind {
+  margin: 0;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: .75rem;
+  letter-spacing: .04em;
+  color: var(--accent);
+}
+h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.3rem, 4vw, 1.65rem);
+  line-height: 1.22;
+  text-wrap: balance;
+}
+.authors { margin: 0; color: var(--muted); }
+.get {
+  margin: .4rem 0 0;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.pdf {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  padding: .45rem 1.3rem;
+}
+.pdf:hover { background: var(--accent); color: #ffffff; }
+.pdf:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.size {
+  font-family: var(--mono);
+  font-size: .75rem;
+  color: var(--muted);
+}
+</style>
+</head>
+<body>
+<main>
+  <h1>IEEE CDC 2026 &middot; two papers</h1>
+
+  <article class="paper">
+    <p class="kind">CDC 2026 &middot; conference paper</p>
+    <h2>On the Strictness of Negative Imaginariness for Linear Systems</h2>
+    <p class="authors">Tianzhe Zhang, Chao Chen, Sei Zhen Khong, Alexander Lanzon</p>
+    <p class="get"><a class="pdf" href="pdf/cdc2026.pdf" type="application/pdf">PDF</a><span class="size">0.4&nbsp;MB</span></p>
+  </article>
+
+  <article class="paper">
+    <p class="kind">IJRNC 2026 &middot; full version with proofs</p>
+    <h2>Marginally Strictly Negative Imaginary Systems</h2>
+    <p class="authors">Tianzhe Zhang, Chao Chen, Alexander Lanzon, Sei Zhen Khong</p>
+    <p class="get"><a class="pdf" href="pdf/ijrnc2026.pdf" type="application/pdf">PDF</a><span class="size">0.5&nbsp;MB</span></p>
+  </article>
+</main>
+</body>
+</html>

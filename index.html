@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="description" content="Two papers on marginally strictly negative imaginary (MSNI) systems: IEEE CDC 2026 and IJRNC 2026.">
+<title>MSNI Papers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600&display=swap">
+<noscript><style>.panel[hidden] { display: block; }</style></noscript>
+<style>
+/* Two buttons at the top choose a paper; the chosen paper's pages show directly below as vector images. */
+:root {
+  --ink: #1c1922;
+  --muted: #5c5667;
+  --rule: #e2dce9;
+  --accent: #660099;
+  --body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: only light;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: var(--body);
+  line-height: 1.5;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.col {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #ffffff;
+  border-bottom: 1px solid var(--rule);
+}
+.switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem;
+  padding-block: .5rem;
+}
+.switch button {
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  min-width: 0;
+  display: grid;
+  gap: .05rem;
+  padding: .4rem .75rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--ink);
+}
+.switch small {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: .72rem;
+  line-height: 1.25;
+  letter-spacing: .04em;
+  color: var(--muted);
+}
+.switch span {
+  font-weight: 600;
+  font-size: .95rem;
+  line-height: 1.3;
+}
+@media (max-width: 360px) {
+  .switch button { padding: .35rem .55rem; }
+  .switch span { font-size: .84rem; }
+}
+.switch button[aria-selected="true"] {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.switch button[aria-selected="true"] small { color: var(--accent); }
+.switch button:focus-visible,
+.meta a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.panel { padding-block: 1rem 3rem; }
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0 0 .75rem;
+  font-size: .85rem;
+  color: var(--muted);
+}
+.meta a {
+  color: var(--accent);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+.pages {
+  display: grid;
+  gap: 1rem;
+}
+.pages img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+</style>
+</head>
+<body>
+<h1 class="sr-only">Papers on marginally strictly negative imaginary systems</h1>
+
+<div class="bar">
+  <nav class="switch col" role="tablist" aria-label="Choose a paper">
+    <button type="button" role="tab" id="tab-cdc" aria-controls="paper-cdc" aria-selected="true">
+      <small>CDC 2026</small><span>Conference paper</span>
+    </button>
+    <button type="button" role="tab" id="tab-ijrnc" aria-controls="paper-ijrnc" aria-selected="false" tabindex="-1">
+      <small>IJRNC 2026</small><span>Full version</span>
+    </button>
+  </nav>
+</div>
+
+<main class="col">
+  <section class="panel" id="paper-cdc" role="tabpanel" aria-labelledby="tab-cdc">
+    <h2 class="sr-only">On the Strictness of Negative Imaginariness for Linear Systems (IEEE CDC 2026)</h2>
+    <p class="meta"><span>6 pages</span><a href="pdf/cdc2026.pdf" download="Zhang_Chen_Khong_Lanzon_CDC2026.pdf">Download PDF</a></p>
+    <div class="pages">
+      <img src="pages/cdc-1.svg" width="612" height="792" alt="Page 1 of 6" fetchpriority="high">
+      <img src="pages/cdc-2.svg" width="612" height="792" alt="Page 2 of 6" loading="lazy" decoding="async">
+      <img src="pages/cdc-3.svg" width="612" height="792" alt="Page 3 of 6" loading="lazy" decoding="async">
+      <img src="pages/cdc-4.svg" width="612" height="792" alt="Page 4 of 6" loading="lazy" decoding="async">
+      <img src="pages/cdc-5.svg" width="612" height="792" alt="Page 5 of 6" loading="lazy" decoding="async">
+      <img src="pages/cdc-6.svg" width="612" height="792" alt="Page 6 of 6" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+  <section class="panel" id="paper-ijrnc" role="tabpanel" aria-labelledby="tab-ijrnc" hidden>
+    <h2 class="sr-only">Marginally Strictly Negative Imaginary Systems (International Journal of Robust and Nonlinear Control, 2026)</h2>
+    <p class="meta"><span>9 pages</span><a href="pdf/ijrnc2026.pdf" download="Zhang_Chen_Lanzon_Khong_IJRNC2026.pdf">Download PDF</a></p>
+    <div class="pages">
+      <img src="pages/ijrnc-1.svg" width="595" height="782" alt="Page 1 of 9" loading="lazy" decoding="async">
+      <img src="pages/ijrnc-2.svg" width="595" height="782" alt="Page 2 of 9" loading="lazy" decoding="async">
+      <img src="pages/ijrnc-3.svg" width="595" height="782" alt="Page 3 of 9" loading="lazy" decoding="async">
+      <img src="pages/ijrnc-4.svg" width="595" height="782" alt="Page 4 of 9" loading="lazy" decoding="async">
+      <img src="pages/ijrnc-5.svg" width="595" height="782" alt="Page 5 of 9" loading="lazy" decoding="async">
+      <img src="pages/ijrnc-6.svg" width="595" height="782" alt="Page 6 of 9" loading="lazy" decoding="async">
+      <img src="pages/ijrnc-7.svg" width="595" height="782" alt="Page 7 of 9" loading="lazy" decoding="async">
+      <img src="pages/ijrnc-8.svg" width="595" height="782" alt="Page 8 of 9" loading="lazy" decoding="async">
+      <img src="pages/ijrnc-9.svg" width="595" height="782" alt="Page 9 of 9" loading="lazy" decoding="async">
+    </div>
+  </section>
+</main>
+
+<script>
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function keyOf(tab) { return tab.id.replace("tab-", ""); }
+  function select(key) {
+    tabs.forEach(function (tab) {
+      var on = keyOf(tab) === key;
+      tab.setAttribute("aria-selected", on ? "true" : "false");
+      tab.tabIndex = on ? 0 : -1;
+      document.getElementById(tab.getAttribute("aria-controls")).hidden = !on;
+    });
+  }
+  function fromHash() { return location.hash === "#ijrnc" ? "ijrnc" : "cdc"; }
+  select(fromHash());
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener("click", function () {
+      if (tab.getAttribute("aria-selected") === "true") return;
+      select(keyOf(tab));
+      if (history.replaceState) history.replaceState(null, "", "#" + keyOf(tab));
+      window.scrollTo(0, 0);
+    });
+    tab.addEventListener("keydown", function (e) {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      var next = tabs[(i + 1) % tabs.length];
+      next.click();
+      next.focus();
+    });
+  });
+  window.addEventListener("hashchange", function () { select(fromHash()); });
+})();
+</script>
+</body>
+</html>
